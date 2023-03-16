@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+            rel="stylesheet"
+            type="text/css"
+            href="/static/styles/header.css"
+            media="all"
+    />
+    <link
+            rel="stylesheet"
+            type="text/css"
+            href="/static/styles/searchbar-filter.css"
+            media="all"
+    />
+    <link
+            rel="stylesheet"
+            type="text/css"
+            href="/static/styles/carrousel.css"
+            media="all"
+    />
+    <link
+            rel="stylesheet"
+            type="text/css"
+            href="/static/styles/vinyle.css"
+            media="all"
+    />
+    <link
+            rel="stylesheet"
+            type="text/css"
+            href="/static/styles/footer.css"
+            media="all"
+    />
+    <link rel="shortcut icon" href="/static/img/icon.png" type="image/x-icon" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    </style>
+    <title>Groupie Tracker - GAVE !</title>
+</head>
+{{template "header"}} {{template "searchbar"}}
+<p class="suggestion">S U G G E S T I O N S</p>
+<div class="THE-container">
+    <div class="container-carrousel">
+      <input class="carrousel-input" type="radio" name="slider" id="item-0" checked />
+      <input class="carrousel-input" type="radio" name="slider" id="item-1" />
+      <input class="carrousel-input" type="radio" name="slider" id="item-2" />
+      <input class="carrousel-input" type="radio" name="slider" id="item-3" />
+      <input class="carrousel-input" type="radio" name="slider" id="item-4" />
+      <div class="cards">
+        {{range $index, $element := .Artists }}
+        <label class="card" for="item-{{$index}}" id="song-{{$index}}">
+          {{template "vinyle" . }}
+        </label>
+        {{end}}
+        {{if ne .User.Pseudo ""}}
+        <script src="/static/styles/heart.js"></script>
+        {{end}}
+      </div>
+    </div>
+</div>
+{{template "footer"}}
+<body></body>
+</html>

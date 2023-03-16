@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/header2.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/loginpage.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/footer2.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/registerpage.css" media="all" />
+    <link rel="shortcut icon" href="/static/img/icon.png" type="image/x-icon" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    </style>
+    <title>Groupie Tracker - GAVE !</title>
+</head>
+{{template "header2"}}
+
+<body>
+    <div class="all">
+
+        <div class="container-sign">
+            <div class="sign">
+                <br>
+                <p>Sign up</p>
+                <br>
+            </div>
+            <form method="POST">
+                <div class="pseudo">
+                    <label for="pseudo">Pseudo</label>
+                </div>
+                <input class="input-pseudo" placeholder="Pseudo" type="text" id="pseudo" name="pseudo">
+                {{if eq . 1 }}
+                <div>Pseudo already existed</div>
+                {{end}}
+                <div class="email">
+                    <br>
+                    <label for="email">Email</label>
+                </div>
+                <input class="input-email" placeholder="example@gmail.com" type="email" id="email" name="email">
+                {{if eq . 2 }}
+                <div>Email already existed</div>
+                {{end}}
+                <div class="password">
+                    <br>
+                    <label for="password">Password</label>
+                </div>
+                <input class="input-password" placeholder="**********" type="password" id="password" name="password">
+                <div class="confirmpassword">
+                    <br>
+                    <label for="confirmpassword">Confirm password</label>
+                </div>
+                <input class="input-confirmpassword" placeholder="**********" type="password" id="confirmpassword"
+                    name="confirmpassword">
+                {{if eq . 3 }}
+                <div>Password doesn't correspond</div>
+                {{end}}
+                <br>
+                <br>
+                <div class="container-button-connection">
+                    <button href="/profil" class="connection" type="submit">Sign Up</button>
+                </div>
+            </form>
+            <div class="registration">
+                <p>For connection, click <a href="/login">here</a></p>
+            </div>
+        </div>
+        <div class="spacebar">
+            <div class="bar"></div>
+        </div>
+        <div class="imglogo">
+            <a href="/">
+                <img class="logo" src="/static/img/logo2.png"></img>
+            </a>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+{{template "footer2"}}
+
+</html>

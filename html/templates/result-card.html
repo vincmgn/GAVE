@@ -1,0 +1,29 @@
+{{define "result-card"}}
+<div class="container-result-card">
+  <div class="card-blue">
+    <img src="{{.Image}}" alt="logo" class="logo-artist" />
+    <div class="infos">
+      <div class="title">
+        <div class="artist-title">{{.Name}}</div>
+        <img src="/static/img/marker.png" alt="pins" class="marker-perso" />
+      </div>
+      <div class="event-infos">
+        <div class="event-date">
+          <span class="underline">Date</span> : {{.CreationDate}}
+        </div>
+        <div class="event-loc">
+          <span class="underline">Location</span> : 
+          {{$count := 0}}
+          {{range $key, $value := .Relations.DatesLocations}}
+            {{$key}}
+            {{if eq $count 0}}
+              {{break}}
+            {{end}}
+          {{end}}
+          <a href="/artist?id={{.Id}}">More Infos Here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{end}}

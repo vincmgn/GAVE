@@ -1,0 +1,199 @@
+{{define "searchbar-filter"}} {{template "searchbar"}}
+<nav class="filters">
+  <div class="textfilter">
+    Filters&nbsp;<img src="/static/img/arrow-right.png" class="arrowfilter" />
+  </div>
+  <ul>
+    <li class="deroulant">
+      <button class="btn">Creation</button>
+      <ul class="sous">
+        <li>
+          <form method="POST">
+            <div class="indropdown" id="dd1">
+              <div class="inoutput">
+                <input
+                  id="choiceartists"
+                  name="yearartists"
+                  type="range"
+                  min="1958"
+                  max="2015"
+                  step="1"
+                />
+                <output id="yearartists" name="yearartists"></output>
+                <script>
+                  const output = document.querySelector("#yearartists");
+                  const range = document.querySelector("#choiceartists");
+                  output.textContent = range.value;
+                  range.addEventListener("input", (event) => {
+                    output.textContent = event.target.value;
+                  });
+                </script>
+              </div>
+              <button class="submitfilter" type="submit">Search</button>
+            </div>
+          </form>
+        </li>
+      </ul>
+    </li>
+    <li class="deroulant">
+      <button class="btn">Albums</button>
+      <ul class="sous">
+        <li>
+          <form method="POST">
+            <div class="indropdown">
+              <div class="inoutput">
+                <input
+                  id="choicealbums"
+                  name="yearalbums"
+                  type="range"
+                  min="1963"
+                  max="2018"
+                  step="1"
+                />
+                <output id="yearalbums" name="yearalbums"></output>
+                <script>
+                  const output1 = document.querySelector("#yearalbums");
+                  const range1 = document.querySelector("#choicealbums");
+                  output1.textContent = range1.value;
+                  range1.addEventListener("input", (event) => {
+                    output1.textContent = event.target.value;
+                  });
+                </script>
+              </div>
+              <button class="submitfilter2" type="submit">Search</button>
+            </div>
+          </form>
+        </li>
+      </ul>
+    </li>
+    <li class="deroulant">
+      <button class="btn">Members</button>
+      <ul class="sous">
+        <li>
+          <div class="filters">
+            <form method="POST">
+              <div class="indropdown">
+                <div class="inoutput">
+                  <input
+                    class="filter"
+                    type="checkbox"
+                    data-attribute="category"
+                    data-group="categories"
+                    id="0"
+                    name="nb"
+                    value="0"
+                  />
+                  0
+                  <input
+                    class="filter"
+                    type="checkbox"
+                    data-attribute="category"
+                    data-group="categories"
+                    id="1"
+                    name="nb"
+                    value="1"
+                  />
+                  1
+                  <input
+                    class="filter"
+                    type="checkbox"
+                    data-attribute="category"
+                    data-group="categories"
+                    id="2"
+                    name="nb"
+                    value="2"
+                  />
+                  2
+                  <input
+                    class="filter"
+                    type="checkbox"
+                    data-attribute="category"
+                    data-group="categories"
+                    id="3"
+                    name="nb"
+                    value="3"
+                  />
+                  3
+                  <input
+                    class="filter"
+                    type="checkbox"
+                    data-attribute="category"
+                    data-group="categories"
+                    id="4"
+                    name="nb"
+                    value="4"
+                  />
+                  4
+                  <input
+                    class="filter"
+                    type="checkbox"
+                    data-attribute="category"
+                    data-group="categories"
+                    id="5"
+                    name="nb"
+                    value="5"
+                  />
+                  5
+                  <input
+                    class="filter"
+                    type="checkbox"
+                    data-attribute="category"
+                    data-group="categories"
+                    id="6"
+                    name="nb"
+                    value="6"
+                  />
+                  6
+                  <input
+                    class="filter"
+                    type="checkbox"
+                    data-attribute="category"
+                    data-group="categories"
+                    id="7"
+                    name="nb"
+                    value="7"
+                  />
+                  7
+                  <input
+                    class="filter"
+                    type="checkbox"
+                    data-attribute="category"
+                    data-group="categories"
+                    id="8"
+                    name="nb"
+                    value="8"
+                  />
+                  8
+                </div>
+                <button class="submitfilter2" type="submit">Search</button>
+              </div>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="deroulant">
+      <button class="btn">Locations</button>
+      <ul class="sous">
+        <li>
+          <form method="POST">
+            <div class="indropdown">
+              <label for="pays-select" class="pays-select"
+                >Choose a location for a concert :</label
+              >
+              <select id="pays-select" name="pays-select">
+                {{range .Pays }}
+                <option value="{{.Pays}}">{{.Pays}}</option>
+                {{end}}
+              </select>
+              <div class="inoutput"></div>
+              <button type="submit" class="submitfilter2">Search</button>
+            </div>
+          </form>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+{{end}}

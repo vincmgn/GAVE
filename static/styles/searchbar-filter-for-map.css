@@ -1,0 +1,276 @@
+.container-searchbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.searchbar {
+  border-radius: 50px;
+  width: 85%;
+  height: 45px;
+  padding-left: 20px;
+  border: 0;
+  background-color: #314a69;
+  color: white;
+}
+
+.searchbar::placeholder {
+  color: white;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.searchimg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  border: none;
+  width: 100px;
+  height: 45px;
+  margin-left: 20px;
+  background-color: #314a69;
+  cursor: pointer;
+}
+
+.searchimg:hover {
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.imgloop {
+  width: 20px;
+  height: 20px;
+}
+
+/********** FILTERS **********/
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.textfilter {
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: "Inter";
+  color: white;
+  align-items: center;
+}
+
+.arrowfilter {
+  width: auto;
+  height: 14px;
+  padding: 0 0 0 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 20px;
+}
+
+nav ul::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.deroulant {
+  float: left;
+  margin-right: 30px;
+}
+
+.btn {
+  cursor: pointer;
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: "Inter";
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  background-color: #314a69;
+  border: 1px solid #314a69;
+  padding: 5px 20px 5px 20px;
+}
+.btn:hover {
+  border: 1px solid white;
+}
+
+.sous {
+  border: 1px solid white;
+  box-shadow: 4px 8px 15px -6px #000000;
+  font-family: "Inter";
+  display: none;
+  border-radius: 25px;
+  background-color: #314a69;
+  color: white;
+  position: absolute;
+  z-index: 1000;
+  margin: 10px 0 0 0;
+  padding: 10px;
+}
+
+nav > ul li:focus-within .sous {
+  display: block;
+}
+
+.sous li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conteneur {
+  margin: 50px 20px;
+  height: 1500px;
+}
+
+/**dropdown fix one by one**/
+.indropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.submitfilter {
+  font-family: "Inter";
+  border-radius: 25px;
+  background-color: #0b2d53;
+  color: white;
+  border: 1px solid #0b2d53;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 80px;
+  height: 40px;
+}
+.submitfilter2 {
+  font-family: "Inter";
+  border-radius: 25px;
+  background-color: #0b2d53;
+  color: white;
+  border: 1px solid #0b2d53;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 80px;
+  height: 30px;
+}
+
+.submitfilter:hover {
+  border: solid 1px white;
+}
+.submitfilter2:hover {
+  border: solid 1px white;
+}
+.pays-select {
+  margin-bottom: 10px;
+}
+
+#dd1 {
+  height: 60px;
+  width: 180px;
+}
+
+#dd2 {
+  height: 60px;
+  width: 180px;
+}
+
+#dd3 {
+  height: auto;
+  width: auto;
+}
+
+#dd4 {
+  height: auto;
+  width: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .container-searchbar {
+    width: 100%;
+  }
+  .searchbar {
+    width: 50%;
+    height: 50px;
+  }
+  .deroulant {
+    height: 35px;
+  }
+  .searchbar::placeholder {
+    font-size: 14px;
+  }
+  .searchimg {
+    width: 100px;
+    height: 53px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-searchbar {
+    width: 100%;
+  }
+  .searchbar {
+    width: 50%;
+    height: 35px;
+  }
+  .deroulant {
+    height: 35px;
+  }
+  .searchbar::placeholder {
+    font-size: 14px;
+  }
+  .searchimg {
+    width: 100px;
+    height: 37px;
+  }
+}
+
+@media screen and (max-width: 836px) {
+  .deroulant {
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 621px) {
+  .filters {
+    margin-left: 20%;
+    margin-right: 10%;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .container-searchbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .searchbar {
+    height: 30px;
+    width: 230px;
+  }
+  .searchbar::placeholder {
+    font-size: 11px;
+  }
+  .searchimg {
+    margin: 0;
+    margin-top: 15px;
+    width: 80px;
+    height: 32px;
+  }
+  .imgloop {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .searchimg {
+    width: 70px;
+    height: 32px;
+  }
+}

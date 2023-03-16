@@ -1,0 +1,113 @@
+body {
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    rgba(0, 41, 89, 0.984375) 99.98%,
+    rgba(66, 121, 124, 0.948581) 99.99%,
+    #000581 100%
+  );
+  width: 99%;
+  height: 100%;
+}
+
+.container-header {
+  margin-top: 40px;
+}
+
+.header {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.link {
+  margin-top: 8px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.links:hover {
+  -webkit-transform: scale(1.05); /* Safari et Chrome */
+  -moz-transform: scale(1.05); /* Firefox */
+  -ms-transform: scale(1.05); /* Internet Explorer 9 */
+  -o-transform: scale(1.05); /* Opera */
+  transform: scale(1.05);
+  filter: drop-shadow(0px 0px 15px #ffb700);
+}
+.container-logo {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  height: 250px;
+  width: auto;
+}
+
+@media screen and (max-width: 769px) {
+  .logo {
+    height: 200px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mic {
+    height: 23px;
+    width: auto;
+  }
+  .pins {
+    height: 21px;
+    width: auto;
+  }
+  .profil {
+    height: 23px;
+    width: auto;
+  }
+  .people {
+    height: 22px;
+    width: auto;
+  }
+  .link {
+    font-size: 14px;
+  }
+  .logo {
+    margin-top: 10px;
+    height: 120px;
+    width: auto;
+  }
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #344c6b #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 13px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #344c6b;
+  border-radius: 50px;
+  border: 2px solid #ffffff;
+}

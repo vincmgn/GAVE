@@ -1,0 +1,15 @@
+{{define "vinyle"}}
+<div class="container-vinyle">
+  <div class="artist">{{.Name}}</div>
+  <a href="/artist?id={{.Id}}">
+    <img
+      src="{{.Image}}"
+      alt="artist"
+      class="img-artist"
+      width="165px"
+      height="165px"
+    />
+  </a>
+  <div class="heart-icon" id="{{.Id}}"></div>
+</div>
+{{end}}

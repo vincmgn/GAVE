@@ -1,0 +1,114 @@
+/* container */
+.container-result-card {
+  margin-bottom: 20px;
+}
+
+.card-blue {
+  width: 100%;
+  height: 122px;
+  background: #314a69;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.container-result-card {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+/* left */
+
+.logo-artist {
+  width: auto;
+  height: 90px;
+}
+
+/* right */
+.infos {
+  width: 65%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+/*top*/
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.artist-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  color: #ffffff;
+}
+/*bottom*/
+.event-infos {
+  width: 100%;
+  display: flex;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.event-date {
+  margin-right: 10%;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.event-infos a {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  color: gold;
+}
+
+@media screen and (max-width: 1200px) {
+  .card-blue {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card-blue {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .event-infos {
+    font-size: 12px;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50px;
+  }
+  .logo-artist {
+    height: 80px;
+  }
+  .infos {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .artist-title {
+    font-size: 13px;
+  }
+  .event-infos {
+    font-size: 11px;
+  }
+  .logo-artist {
+    height: 70px;
+  }
+}

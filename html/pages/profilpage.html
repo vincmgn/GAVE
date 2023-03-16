@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/static/styles/header2.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="/static/styles/profilpage.css" media="all" />
+  <link
+  rel="stylesheet"
+  type="text/css"
+  href="/static/styles/artist.css"
+  media="all"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="/static/styles/footer2.css"
+  media="all"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="/static/styles/album-spotify.css"
+  media="all"
+/>
+  <link rel="shortcut icon" href="/static/img/icon.png" type="image/x-icon" />
+  <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/styles/vinyle.css"
+      media="all"
+    />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+  </style>
+  <title>Groupie Tracker - GAVE !</title>
+</head>
+{{template "header2"}}
+
+<body>
+  <div class="all">
+
+    <div class="container-profil">
+      <div class="profil">
+        <br>
+        <p>Profil</p>
+        <br>
+      </div>
+
+      <div class="pseudo">
+        <label for="pseudo">Pseudo</label>
+      </div>
+
+
+      <div class="input-pseudo" placeholder="pseudo" type="text" id="pseudo" name="pseudo">{{.Profil.Pseudo}}</div>
+
+      <div class="email">
+        <br>
+        <label for="email">Email</label>
+      </div>
+      <div class="input-email" placeholder="example@gmail.com" type="email" id="email" name="email">{{.Profil.Email}}</div>
+        <br>
+      <form method="POST">
+        <div class="container-changepassword">
+          <div class="option">
+            <br>
+            <label for="option">Change password</label>
+          </div>
+          <div class="contain-changepassword">
+            <input class="input-password" placeholder="New password" type="password" id="password" name="password">
+            <input class="input-chpassword" placeholder="Confirm password" type="password" id="chpassword"
+              name="chpassword">
+            <br>
+            {{if eq .Err 1 }}
+            <div>Password doesn't correspond</div>
+            {{end}}
+          </div>
+          <button class="submit" type="submit">Submit</button>
+      </form>
+      <form method="POST">
+        <input type="hidden" name="logout" value="logout">
+        <button class="logout" type="submit">Logout</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="spacebar">
+    <div class="bar"></div>
+  </div>
+  <div class="imglogo">
+    <a href="/">
+      <img class="logo" src="/static/img/logo2.png"></img>
+    </a>
+  </div>
+  </div>
+<div class="fix-margin-bottom">
+
+  <div class="liked-title">
+    <img class="heart" src="/static/img/redheart.png"></img>
+    <div class="title">
+      <p>Liked Artists</p>
+    </div>
+  </div>
+  <div class="container">
+    {{range .Like }}
+    <div class="container-vinyle">
+      <div class="artist">{{.Name}}</div>
+      <a href="/artist?id={{.Id}}">
+        <img
+          src="{{.Image}}"
+          alt="artist"
+          class="img-artist"
+          width="165px"
+          height="165px"
+        />
+      </a>
+      <div class="heart-icon liked" id="{{.Id}}"></div>
+    </div>
+    {{end}}
+    <script src="/static/styles/heart2.js"></script>
+  </div>
+  <br>
+  {{if eq .SpotifyProfil.DisplayName "" }}
+  <form method="post">
+    <div class="inputspotify">
+      <div class="connect">
+        <label for="connect">Connect to Spotify</label>
+      </div>
+      <br>
+
+      <input class="input-pseudo-spotify" placeholder="Spotify pseudo" type="text" id="spotify" name="spotify">
+      <button class="submitspotify" type="submit">submit</button>
+      {{if eq .Err 2 }}
+        <div>Pseudo Incorrect</div>
+      {{end}}
+    </div>
+  </form>
+  {{end}}
+
+
+  <div class="container-card-album">
+    <div class="container-album">
+      <div class="inside-bottom">
+        Playlist Spotify
+        <img src="/static/img/spotify 1.png" class="spo" />
+      </div>
+
+      <div class="container-album-spotify">
+        {{range .SpotifyProfil.Playlists }}
+          {{template "playlist-spotify" . }}
+        {{end}}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+{{template "footer2"}}
+
+</html>

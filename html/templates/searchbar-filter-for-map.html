@@ -1,0 +1,72 @@
+{{define "searchbar-filter-for-map"}}
+<form class="container-searchbar" method="POST">
+  <input
+    class="searchbar"
+    type="text"
+    placeholder="Search here . . ."
+    name="search"
+  />
+  <button class="searchimg">
+    <img class="imgloop" src="/static/img/chercher.png" />
+  </button>
+</form>
+<nav class="filters">
+  <div class="textfilter">
+    Filters&nbsp;<img src="/static/img/arrow-right.png" class="arrowfilter" />
+  </div>
+  <ul>
+    <li class="deroulant">
+      <button class="btn">Dates</button>
+      <ul class="sous">
+        <li>
+          <form method="POST">
+            <div class="indropdown" id="dd1">
+              <div class="inoutput">
+                <input
+                  id="choiceartists"
+                  name="yearartists"
+                  type="range"
+                  min="1900"
+                  max="2020"
+                  step="1"
+                />
+                <output id="yearartists" name="yearartists"></output>
+                <script>
+                  const output = document.querySelector("#yearartists");
+                  const range = document.querySelector("#choiceartists");
+                  output.textContent = range.value;
+                  range.addEventListener("input", (event) => {
+                    output.textContent = event.target.value;
+                  });
+                </script>
+              </div>
+              <button class="submitfilter" type="submit">Search</button>
+            </div>
+          </form>
+        </li>
+      </ul>
+    </li>
+    <li class="deroulant">
+      <button class="btn" id="marginfix">Locations</button>
+      <ul class="sous">
+        <li>
+          <form method="POST">
+            <div class="indropdown">
+              <label for="pays-select" class="pays-select"
+                >Choose a location for a concert&nbsp;:</label>
+              <select id="pays-select" name="pays-select">
+                {{range .Pays }}
+                <option value="{{.Pays}}">{{.Pays}}</option>
+                {{end}}
+              </select>
+              <div class="inoutput"></div>
+              <button type="submit" class="submitfilter2">Search</button>
+            </div>
+          </form>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+{{end}}

@@ -1,0 +1,294 @@
+/* container */
+.container-about-us {
+  width: 100%;
+  display: flex;
+  margin: 100px 0 0 0;
+}
+/*************/
+
+/* info left*/
+.about-us-left {
+  width: 50%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 12px;
+  color: #ffffff;
+}
+.fix-marging {
+  margin-left: 100px;
+}
+
+.container-title {
+  display: flex;
+  font-weight: 500;
+  font-size: 25px;
+  justify-content: center;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.about {
+  margin-right: 20px;
+}
+
+.container-purpose {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.title-purpose {
+  font-weight: 500;
+  font-size: 15px;
+  width: 100%;
+}
+.text-purpose {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.container-infos {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.infos-title-and-text {
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+}
+.infos-title {
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 40px;
+}
+.infos-text {
+  margin: 10px 20px 0 0;
+}
+.ynov {
+  height: 62px;
+  width: 98px;
+}
+
+.container-us {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 20px;
+}
+.us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 130px;
+}
+.name {
+  font-weight: 200;
+  font-size: 12px;
+}
+.avatar {
+  height: 85px;
+  width: auto;
+}
+.github {
+  width: 17px;
+  height: auto;
+}
+
+.container-lang-and-tools {
+  margin-top: 40px;
+  display: flex;
+}
+.lang {
+  width: 60%;
+}
+.tools {
+  width: 40%;
+}
+.lang-title {
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.container-logo-lang {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  justify-content: space-between;
+}
+.container-logo-tools {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  justify-content: space-between;
+}
+.logo-golang {
+  height: 50px;
+}
+.logo-htmlcss {
+  height: 44px;
+  width: auto;
+}
+.logo-js {
+  height: 40px;
+}
+
+.tools-title {
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.logo-spotify {
+  height: 50px;
+}
+.logo-maps {
+  height: 44px;
+}
+
+@media screen and (max-width: 1350px) {
+  .container-lang-and-tools {
+    flex-direction: column;
+  }
+  .tools {
+    margin-top: 40px;
+    width: 100%;
+  }
+  .container-logo-tools {
+    width: 50%;
+  }
+}
+
+/*************/
+
+/* middle */
+.about-us-space-bare {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+.bar {
+  height: 600px;
+  width: 10px;
+  background: #314a69;
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 1350px) {
+  .bar {
+    height: 700px;
+  }
+}
+/*************/
+
+/* logo right */
+.about-us-right {
+  width: 50%;
+}
+.gave {
+  width: 500px;
+  height: auto;
+  margin: 50px 0 0 8%;
+}
+@media screen and (max-width: 1350px) {
+  .gave {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .gave {
+    width: 450px;
+    height: auto;
+    margin: 120px 0 0 8%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .gave {
+    width: 400px;
+    height: auto;
+    margin: 140px 0 0 8%;
+  }
+}
+
+/*************/
+
+/*MOBILE*/
+@media screen and (max-width: 1000px) {
+  .container-about-us {
+    margin-top: 60px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .about-us-left {
+    width: 100%;
+    margin: 0;
+  }
+  .fix-marging {
+    margin: 10% 20% 0 20%;
+  }
+  .container-lang-and-tools {
+    flex-direction: row;
+  }
+  .tools {
+    margin: 0;
+    width: 40%;
+  }
+  .container-logo-tools {
+    width: 100%;
+  }
+
+  .about-us-space-bare {
+    display: none;
+  }
+  .about-us-right {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .gave {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container-lang-and-tools {
+    flex-direction: column;
+  }
+  .lang {
+    width: 100%;
+  }
+  .container-logo-lang {
+    width: 60%;
+  }
+  .tools {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .container-logo-tools {
+    width: 50%;
+  }
+  .logo-spotify {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .gave {
+    width: 300px;
+  }
+  .container-title {
+    font-size: 22px;
+  }
+  .container-infos {
+    flex-direction: column;
+  }
+  .ynov {
+    margin-top: 30px;
+  }
+  .container-us {
+    flex-direction: column;
+    height: 500px;
+    margin-top: 0px;
+  }
+}

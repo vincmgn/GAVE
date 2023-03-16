@@ -1,0 +1,36 @@
+{{define "album-spotify"}}
+<div class="data-spotify">
+  <div class="left-1">
+    <img class="img-album" src="{{range .Images}}{{.Url}}{{end}}" />
+    <div class="data">
+      <div class="name-album">Album : {{.Name}}</div>
+      <div class="separator">&ensp; &ensp;|&ensp; &ensp;</div>
+      <div class="date-album">Date : {{.ReleaseDate}}</div>
+    </div>
+  </div>
+  <div class="right-1">
+    <div class="box">
+      <a href="#popup{{.Name}}" class="button-watch-tracks"
+        >Watch tracks <img src="/static/img/binoculaire.png" class="eye"
+      /></a>
+      <a
+        href="{{.ExternalUrls.Spotify}}"
+        target="_blank"
+        class="button-redirection-spotify"
+        ><img src="/static/img/plus.png" alt="more infos" class="morespotify"
+      /></a>
+    </div>
+
+    <div id="popup{{.Name}}" class="overlay">
+      <div class="popup">
+        <div class="popup-title">{{.Name}}</div>
+        <a href="#" class="cross">&times;</a>
+        <div class="container-alltracks">
+          {{range .Tracks}} {{template "track" .}} {{end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{end}}

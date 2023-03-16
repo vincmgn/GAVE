@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/styles/header.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/styles/searchbar-filter-for-map.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/styles/result-card.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/styles/footer.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/styles/mappage.css"
+      media="all"
+    />
+    <link rel="shortcut icon" href="/static/img/icon.png" type="image/x-icon" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <title>Groupie Tracker - GAVE !</title>
+  </head>
+  {{template "header"}}
+  <div class="titlemap">M A P</div>
+  <div class="container-containers">
+    <div class="container-map">
+      <div id="map" data-geodata="{{.Coordonnees}}" data-geoname="{{.CooName}}" data-geoartist='{{.CooArtist}}' data-geoid='{{.CooId}}' data-geodates='{{.CooDates}}'>
+        <script>
+          function initMap() {
+
+            const geolocations = JSON.parse(document.getElementById('map').dataset.geodata);
+            const geoname = JSON.parse(JSON.stringify(document.getElementById('map').dataset.geoname));
+            let geoid
+            let geoartist
+            let geodates
+            try {
+              geoid = JSON.parse(document.getElementById('map').dataset.geoid);
+            } catch (error) {
+              geoid = "";
+            }
+            try {
+              geoartist = JSON.parse(document.getElementById('map').dataset.geoartist);
+            } catch (error) {
+              geoartist = "";
+            }
+            try {
+              geodates = JSON.parse(document.getElementById('map').dataset.geodates);
+            } catch (error) {
+              geodates = "";
+            }
+
+            
+
+            const map = new google.maps.Map(document.getElementById("map"), {
+              zoom: 3,
+              center: { lat: 45.764043, lng: 4.835659 },
+            });
+      
+            geolocations.forEach((location, index) => {
+              const [lat, lng] = location;
+              const result = geoname.split(',');
+              string = "";
+
+              if (geoid === "") {
+                string = 
+                '<form method="POST">' +
+                `<input type="hidden" name="bubble" value="${result[index]}">` +
+                `<p> Search concerts in ${result[index]} </p>` +
+                `<button type="submit" class="submitfilter2">Search</button>` +
+                "</div>" +
+                "</form>";
+              } else {
+                string = ""
+                geoartist[index].forEach((artist, artind) => {
+                  string += `<p><b><a href='/artist?id=${geoid[index][artind]}'>${artist}</a></b> => ${geodates[index][artind]} </p>`
+                })
+              }
+              
+              const image = "/static/img/marker.png";
+              const marker = new google.maps.Marker({
+                position: { lat, lng },
+                map: map,
+                icon: image,
+              });
+      
+              const content =
+                '<div id="content">' +
+                '<div id="siteNotice">' +
+                "</div>" +
+                `<h1 id="firstHeading" class="firstHeading">${result[index]}</h1>` +
+                '<div id="bodyContent">' +
+                string +
+                "</div>" +
+                "</div>";
+      
+              const infowindow = new google.maps.InfoWindow({
+                content: content,
+              });
+      
+              marker.addListener("click", () => {
+                infowindow.open({
+                  anchor: marker,
+                  map: map,
+                });
+              });
+            });
+          }
+      
+          window.initMap = initMap;
+        </script>
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeq2hPzggF1UpPuHe8A3qao36F9OuAlvc&callback=initMap" defer></script>
+      </div>
+    </div>
+    <div class="spacebar-map">
+      <div class="bar-map"></div>
+    </div>
+    <div class="container-research">
+      {{template "searchbar-filter-for-map" . }}
+      <div class="container-result-scroll">
+        {{range .Artists }} {{template "result-card" . }} {{end}}
+      </div>
+      <div class="pagination">
+        <form method="POST">
+          <button class="button" name="pages" id="pages" value="1">1</button>
+          <button class="button" name="pages" id="pages" value="2">2</button>
+          <button class="button" name="pages" id="pages" value="3">3</button>
+          <button class="button" name="pages" id="pages" value="4">4</button>
+          <button class="button" name="pages" id="pages" value="5">5</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  {{template "footer"}}
+  <body></body>
+</html>

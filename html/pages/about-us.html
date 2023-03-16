@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/styles/header2.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/styles/footer2.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/styles/about-us.css"
+      media="all"
+    />
+    <link rel="shortcut icon" href="/static/img/icon.png" type="image/x-icon" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    </style>
+    <title>Groupie Tracker - GAVE !</title>
+  </head>
+  {{template "header2"}}
+  <div class="container-about-us">
+    <div class="about-us-left">
+      <div class="fix-marging">
+        <div class="container-title">
+          <div>A B O U T - U S</div>
+        </div>
+        <div class="container-purpose">
+          <div class="title-purpose">The purpose</div>
+          <div class="text-purpose">
+            Welcome to our website ! <br />You can find some references of
+            artists and music groups with their albums and concerts. A map page
+            is also implemented to locate the artist's concerts.
+          </div>
+        </div>
+        <div class="container-infos">
+          <div class="infos-title-and-text">
+            <div class="infos-title">Who are we ?</div>
+            <div class="infos-text">
+              We are all three in the first year of a Bachelor's degree in
+              computer science at Lyon Ynov Campus !
+            </div>
+          </div>
+          <img src="/static/img/logo-ynov.png" alt="logo ynov" class="ynov" />
+        </div>
+        <div class="container-us">
+          <div class="us">
+            <img
+              src="/static/img/alex.png"
+              alt="alexandre budan"
+              class="avatar"
+            />
+            <div class="name">Alexandre BUDAN</div>
+            <a href="https://github.com/AlexandreBudan"
+              ><img src="/static/img/github.svg" alt="github" class="github"
+            /></a>
+          </div>
+          <div class="us">
+            <img src="/static/img/emma.png" alt="emma picard" class="avatar" />
+            <div class="name">Emma PICARD</div>
+            <a href="https://github.com/pcrdemma"
+              ><img src="/static/img/github.svg" alt="github" class="github"
+            /></a>
+          </div>
+          <div class="us">
+            <img
+              src="/static/img/vinc.png"
+              alt="vincent magnien"
+              class="avatar"
+            />
+            <div class="name">Vincent MAGNIEN</div>
+            <a href="https://github.com/vincmgn"
+              ><img src="/static/img/github.svg" alt="github" class="github"
+            /></a>
+          </div>
+        </div>
+        <div class="container-lang-and-tools">
+          <div class="lang">
+            <div class="lang-title">Programming languages used</div>
+            <div class="container-logo-lang">
+              <img
+                src="/static/img/golang.png"
+                alt="golang"
+                class="logo-golang"
+              />
+              <img src="/static/img/css-3.png" alt="css" class="logo-htmlcss" />
+              <img
+                src="/static/img/html-5.png"
+                alt="html"
+                class="logo-htmlcss"
+              />
+              <img src="/static/img/js.png" alt="html" class="logo-js" />
+            </div>
+          </div>
+          <div class="tools">
+            <div class="tools-title">Tools / API</div>
+            <div class="container-logo-tools">
+              <img
+                src="/static/img/API-spotify.png"
+                alt="API-spotify"
+                class="logo-spotify"
+              />
+              <img
+                src="/static/img/pins_google_maps.png"
+                alt="google maps"
+                class="logo-maps"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-us-space-bare">
+      <div class="bar"></div>
+    </div>
+
+    <div class="about-us-right">
+      <img src="/static/img/logogave2.png" alt="logo-gave" class="gave" />
+    </div>
+  </div>
+
+  {{template "footer2"}}
+  <body></body>
+</html>

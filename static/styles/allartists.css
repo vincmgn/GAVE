@@ -1,0 +1,39 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  color: #ffffff;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  width: 11px;
+  display: flex;
+  justify-content: center;
+  width: 45px;
+  margin: 0 5px 0 5px;
+}
+
+.button#pages {
+  color: white;
+  border-radius: 50px;
+  background-color: #314a69;
+  border: solid 1px #314a69;
+  cursor: pointer;
+}
+
+.button#pages:hover {
+  border: 1px solid white;
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 424px) {
+  .button {
+    font-size: 15px;
+  }
+}

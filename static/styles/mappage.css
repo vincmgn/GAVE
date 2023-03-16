@@ -1,0 +1,136 @@
+.titlemap {
+  margin: 50px 0 30px 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+}
+/*container-containers*/
+.container-containers {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+/*map*/
+.container-map {
+  display: flex;
+  width: 50%;
+  align-items: center;
+}
+#map {
+  height: 600px;
+  width: 100%;
+  border: solid 2px white;
+}
+/*bar*/
+.spacebar-map {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+.bar-map {
+  height: 700px;
+  width: 8px;
+  background: #314a69;
+  border-radius: 50px;
+}
+/*research*/
+.container-research {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-result-scroll {
+  width: 120%;
+  height: 600px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+  .container-containers {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-map {
+    width: 80%;
+  }
+  .spacebar-map {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+  }
+  .bar-map {
+    width: 85%;
+    height: 8px;
+  }
+  .container-research {
+    width: 100%;
+  }
+  .container-result-scroll {
+    width: 100%;
+    overflow: visible;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 600px) {
+    #map {
+      height: 450px;
+    }
+  }
+}
+
+/* PAGINATION */
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.button {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  color: #ffffff;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  width: 11px;
+  display: flex;
+  justify-content: center;
+  width: 45px;
+  margin: 0 5px 0 5px;
+}
+
+.button#pages {
+  color: white;
+  border-radius: 50px;
+  background-color: #314a69;
+  border: solid 1px #314a69;
+  cursor: pointer;
+}
+
+.button#pages:hover {
+  border: 1px solid white;
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 424px) {
+  .button {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0 0 0;
+  }
+}

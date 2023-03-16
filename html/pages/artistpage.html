@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/styles/header.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/styles/artist.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/styles/footer.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/styles/album-spotify.css"
+      media="all"
+    />
+    <link rel="shortcut icon" href="/static/img/icon.png" type="image/x-icon" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    </style>
+    <title>Groupie Tracker - GAVE !</title>
+  </head>
+  {{template "header"}}
+  <div class="big-container">
+    <div class="container-container">
+      <div class="container-artist">
+        <div class="nom-artist">
+          {{.Name}}
+          <img src="/static/img/musical-note 1.png" class="musicnote" />
+        </div>
+
+        <div class="inside-top">
+          <div class="container-logo-artist">
+            <img src="{{.Image}}" alt="img_artist" class="logo-artist" />
+          </div>
+          <div class="container-informations">
+            <div class="members">
+              Members : {{range .Members }}{{.}} | {{end}}
+            </div>
+            <br />
+            <div class="creationdate">
+              <span class="underline">Creation date</span> : {{.CreationDate}}
+            </div>
+            <br />
+            <div class="firstalbum">
+              <span class="underline">First album</span>&nbsp;: {{.FirstAlbum}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-location">
+        <div class="container-information-location">
+          <div class="nom-location">
+            Concerts locations
+            <img src="/static/img/marker1 1.png" class="loc" />
+          </div>
+          <div class="data-location">
+            {{range $key, $value := .Relations.DatesLocations}}
+            <p class="locations">
+              | {{$key}}: {{range $value}} {{ . }}{{end}} |
+            </p>
+            {{end}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-card-album">
+      <div class="container-album">
+        <div class="inside-bottom">
+          More informations from Spotify
+          <img src="/static/img/spotify 1.png" class="spo" />
+        </div>
+        <br />
+        <div class="info">
+          Type : {{range .SpotifyData.Genres }} {{.}} | {{end}} &ensp;
+          Popularity : {{.SpotifyData.Popularity}}
+        </div>
+        <br />
+        <div class="container-album-spotify">
+          {{range .SpotifyData.Albums}} {{template "album-spotify" . }} {{end}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{template "footer"}}
+
+  <body></body>
+</html>

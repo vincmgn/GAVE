@@ -1,0 +1,14 @@
+{{define "searchbar"}}
+<form class="container-searchbar" method="POST" action="/artists">
+  <input
+    class="searchbar"
+    type="text"
+    placeholder="Search here . . ."
+    name="search"
+  />
+  <button class="searchimg">
+    <img class="imgloop" src="/static/img/chercher.png" />
+  </button>
+</form>
+
+{{end}}

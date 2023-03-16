@@ -1,0 +1,16 @@
+{{define "track"}}
+<div class="popup-container-track">
+  <div class="left">
+    <img src="{{range .Images}}{{.Url}}{{end}}" alt="track" class="img-track" />
+    <div class="container-number-title">
+      <div class="track-number">{{.TrackNumber}}&nbsp;</div>
+      <div class="track-title">
+        {{.Name}}
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="track-duration">{{.DurationMinute}}</div>
+  </div>
+</div>
+{{end}}

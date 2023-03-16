@@ -1,0 +1,24 @@
+/*bar*/
+.spacebar {
+    margin-top: 100px;
+    margin-left: 140px;
+    margin-right: -600px;
+    width:20% ;
+    display: flex;
+    justify-content: center;
+}
+
+.bar {
+    height: 400px;
+    width: 6px;
+    background: #314a69;
+    border-radius: 50px;
+}
+.imglogo{
+    width: 400px;
+    margin-top: 100px;
+    margin-left: 400px;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+  }
