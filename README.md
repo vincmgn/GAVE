@@ -1,6 +1,6 @@
 #   GROUPIE TRACKER | GAVE  
 > Groupie Tracker is (a first year) school project.  
-> This project was completed by a team of three colleagues.  
+> This project was completed by a team of three students.  
 > We decided to name our project : GAVE  
 
 - G -> Groupie Tracker  
@@ -8,7 +8,7 @@
 - V -> Vincent (group member)
 - E -> Emma (group member)
 
-> It's a website where the user can search (filter) for musical artists and groups of interest.
+> It's a website where the user can search (with filters) for musical artists and groups of interest.
 > A lot of information about artists and groups is available on the website:  
 
 - Location of concerts both prior and future.
@@ -18,10 +18,10 @@
 - The names of the artist or group members.
 
 > You can create a profile.
-> You can check on a map the location for the concerts of each group or artist.  
+> You can also check on a map the location for the concerts of each group or artist.  
 
 # Getting started  
-> <Install> golang
+> To get the most out of the project you will have to install <a href="https://go.dev">golang</a>.
 
 # Built with  
 The coding languages we used to create our website were:  
@@ -33,9 +33,9 @@ The coding languages we used to create our website were:
 # Authors | Github :   
 Names | Github  
 | ------ | ------ |  
-Alexandre Budan  |  @AlexandreBudan  
-Vicent Magnien   |  @vincmgn  
-Emma Picard      |  @pcrdemma  
+Alexandre Budan  |  <a href="#">@AlexandreBudan</a>
+Vicent Magnien   |  <a href="#">@vincmgn</a>
+Emma Picard      |  <a href="#">@pcrdemma</a>
 
 
 
