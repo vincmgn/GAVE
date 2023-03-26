@@ -38,7 +38,7 @@ The coding languages we used to create our website were:
 
 
 <br><br>
-# Authors | Github :   
+# Authors | Github <img alt="Github" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="padding-right:10px;" />
 Names | Github  
 | ------ | ------ |  
 Alexandre Budan  |  <a href="https://github.com/AlexandreBudan">@AlexandreBudan</a>
