@@ -35,9 +35,20 @@ The coding languages we used to create our website were:
 <img align="left" alt="CSS3" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" style="padding-right:10px;" />
 <img align="left" alt="JavaScript" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" style="padding-right:10px;" />
 <img align="left" alt="JavaScript" width="26px" src="https://upload.wikimedia.org/wikipedia/commons/9/97/Sqlite-square-icon.svg" style="padding-right:10px;" />
-
-
 <br><br>
+
+# Area of improvement 💡
+> Some features that can be added in the future:
+
+- pins with incremented number
+- vinyl switch design
+- new vinyl design
+- display URI of Spotify
+- improve security with email checking (send a token to the email address when creating the account)
+- fix images with user playlist tracking
+- optimize data reception and display (especially for the MapPage)
+<br>
+
 # Authors | Github <img alt="Github" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="padding-right:10px;" />
 Names | Github  
 | ------ | ------ |  
