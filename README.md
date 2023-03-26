@@ -1,5 +1,5 @@
-#   GROUPIE TRACKER | GAVE  
-> Groupie Tracker is (a first year) school project.  
+#   GROUPIE TRACKER | GAVE 🎵
+> Groupie Tracker is (a first year) school project.
 > This project was completed by a team of three students.  
 > We decided to name our project : GAVE  
 
@@ -21,11 +21,11 @@
 > You can also check on a map the location for the concerts of each group or artist.  
 <br>
 
-# Getting started  
+# Getting started 🚀
 > To get the most out of the project you will have to install <a href="https://go.dev" target="_blank">golang</a>.
 <br>
 
-# Built with  
+# Built with 🔨
 The coding languages we used to create our website were:
 
 <img align="left" alt="Golang" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" style="padding-right:10px;" />
