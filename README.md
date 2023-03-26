@@ -21,7 +21,7 @@
 > You can also check on a map the location for the concerts of each group or artist.  
 
 # Getting started  
-> To get the most out of the project you will have to install <a href="https://go.dev">golang</a>.
+> To get the most out of the project you will have to install <a href="https://go.dev" target="_blank">golang</a>.
 
 # Built with  
 The coding languages we used to create our website were:  
@@ -33,9 +33,9 @@ The coding languages we used to create our website were:
 # Authors | Github :   
 Names | Github  
 | ------ | ------ |  
-Alexandre Budan  |  <a href="#">@AlexandreBudan</a>
-Vicent Magnien   |  <a href="#">@vincmgn</a>
-Emma Picard      |  <a href="#">@pcrdemma</a>
+Alexandre Budan  |  <a href="#" target="_blank">@AlexandreBudan</a>
+Vicent Magnien   |  <a href="#" target="_blank">@vincmgn</a>
+Emma Picard      |  <a href="#" target="_blank">@pcrdemma</a>
 
 
 
