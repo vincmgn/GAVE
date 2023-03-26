@@ -19,9 +19,11 @@
 
 > You can create a profile.
 > You can also check on a map the location for the concerts of each group or artist.  
+<br>
 
 # Getting started  
 > To get the most out of the project you will have to install <a href="https://go.dev" target="_blank">golang</a>.
+<br>
 
 # Built with  
 The coding languages we used to create our website were:
@@ -32,6 +34,8 @@ The coding languages we used to create our website were:
 <img align="left" alt="JavaScript" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" style="padding-right:10px;" />
 <img align="left" alt="JavaScript" width="26px" src="https://upload.wikimedia.org/wikipedia/commons/9/97/Sqlite-square-icon.svg" style="padding-right:10px;" />
 
+
+<br><br>
 # Authors | Github :   
 Names | Github  
 | ------ | ------ |  
