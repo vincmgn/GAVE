@@ -24,18 +24,20 @@
 > To get the most out of the project you will have to install <a href="https://go.dev" target="_blank">golang</a>.
 
 # Built with  
-The coding languages we used to create our website were:  
-- Golang - (Back-End)
-- HTML - (Front-End)
-- CSS  - (Front-End)
-- SQLite - (Back-End)
+The coding languages we used to create our website were:
+
+<img align="left" alt="Golang" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" style="padding-right:10px;" />
+<img align="left" alt="HTML5" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" style="padding-right:10px;" />
+<img align="left" alt="CSS3" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" style="padding-right:10px;" />
+<img align="left" alt="JavaScript" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" style="padding-right:10px;" />
+<img align="left" alt="JavaScript" width="26px" src="https://upload.wikimedia.org/wikipedia/commons/9/97/Sqlite-square-icon.svg" style="padding-right:10px;" />
 
 # Authors | Github :   
 Names | Github  
 | ------ | ------ |  
-Alexandre Budan  |  <a href="#" target="_blank">@AlexandreBudan</a>
-Vicent Magnien   |  <a href="#" target="_blank">@vincmgn</a>
-Emma Picard      |  <a href="#" target="_blank">@pcrdemma</a>
+Alexandre Budan  |  <a href="#">@AlexandreBudan</a>
+Vicent Magnien   |  <a href="#">@vincmgn</a>
+Emma Picard      |  <a href="#">@pcrdemma</a>
 
 
 
