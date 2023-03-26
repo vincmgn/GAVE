@@ -19,9 +19,11 @@
 
 > You can create a profile.
 > You can also check on a map the location for the concerts of each group or artist.  
+<br>
 
 # Getting started  
 > To get the most out of the project you will have to install <a href="https://go.dev" target="_blank">golang</a>.
+<br>
 
 # Built with  
 The coding languages we used to create our website were:
@@ -37,9 +39,9 @@ The coding languages we used to create our website were:
 # Authors | Github :   
 Names | Github  
 | ------ | ------ |  
-Alexandre Budan  |  <a href="#">@AlexandreBudan</a>
-Vicent Magnien   |  <a href="#">@vincmgn</a>
-Emma Picard      |  <a href="#">@pcrdemma</a>
+Alexandre Budan  |  <a href="https://github.com/AlexandreBudan">@AlexandreBudan</a>
+Vicent Magnien   |  <a href="https://github.com/vincmgn">@vincmgn</a>
+Emma Picard      |  <a href="https://github.com/pcrdemma">@pcrdemma</a>
 
 
 
