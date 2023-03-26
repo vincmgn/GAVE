@@ -8,6 +8,7 @@
 - V -> Vincent (group member)
 - E -> Emma (group member)
 <br>
+
 > It's a website where the user can search (with filters) for musical artists and groups of interest.
 > A lot of information about artists and groups is available on the website:  
 
@@ -17,6 +18,7 @@
 - The date when the artist or group were officially formed.
 - The names of the artist or group members.
 <br>
+
 > You can create a profile.
 > You can also check on a map the location for the concerts of each group or artist.  
 <br>
